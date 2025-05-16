@@ -1,3 +1,7 @@
+export const config = {
+  runtime: 'nodejs'
+};
+
 export default async function handler(req, res) {
   const kw = req.query.kw || '';
   if (!kw) return res.status(400).json({ error: 'Missing kw param' });
